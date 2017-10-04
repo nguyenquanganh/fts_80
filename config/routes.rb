@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  get "/pages/*page" => "pages#show"
-  root "pages#show", page: "home"
+  devise_for :users, controllers: {registrations: "users"}
+  scope "(:locale)", locale: /en|vi/ do
+    resources :users
+    root "pages#show", page: "home"
+    get "/pages/*page", as: :page, to: "pages#show"
+  end  
 end
