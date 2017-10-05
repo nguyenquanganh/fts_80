@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
 gem "coffee-rails", "4.2.2"
 gem "jbuilder", "2.7.0"
@@ -15,6 +15,7 @@ gem "turbolinks", "5.0.1"
 gem "uglifier", "3.2.0"
 gem "rails-controller-testing"
 gem "omniauth-facebook"
+gem "cancancan", "~> 2.0"
 
 group :development do
   gem "listen", "3.0.8"
@@ -26,7 +27,7 @@ end
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "sqlite3", "1.3.13"
-  gem 'byebug',  '9.0.6', platform: :mri
+  gem "byebug",  "9.0.6", platform: :mri
   gem "rspec"
   gem "rspec-rails"
   gem "rspec-collection_matchers"
