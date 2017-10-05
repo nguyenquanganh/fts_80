@@ -16,6 +16,7 @@ gem "uglifier", "3.2.0"
 gem "rails-controller-testing"
 gem "omniauth-facebook"
 gem "cancancan", "~> 2.0"
+gem "devise"
 
 group :development do
   gem "listen", "3.0.8"
