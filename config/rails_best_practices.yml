@@ -26,11 +26,13 @@ RemoveTrailingWhitespaceCheck: { }
 RemoveUnusedMethodsInControllersCheck: {
   except_methods: [
     "PagesController#show",
-    "UsersController#create"
+    "UsersController#create",
+    "SubjectsController#index",
+    "SubjectsController#create"
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
-RemoveUnusedMethodsInModelsCheck: { 
+RemoveUnusedMethodsInModelsCheck: {
   except_methods: []
 }
 ReplaceComplexCreationWithFactoryMethodCheck: { attribute_assignment_count: 2 }
