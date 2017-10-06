@@ -14,7 +14,7 @@
     <% if @minimum_password_length %>
       <em><% t("sessions.new.char_min",
         min_length: @minimum_password_length) %></em>
-    <% end %>    
+    <% end %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 

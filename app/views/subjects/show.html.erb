@@ -1,0 +1,11 @@
+<p>
+  <strong><%= t "subject.index.name" %></strong>
+  <%= @subject.name %>
+</p>
+
+<p>
+  <strong><%= t "subject.index.content" %></strong>
+  <%= @subject.content %>
+</p>
+
+<%= link_to t("subject.edit.back"), subjects_path %>

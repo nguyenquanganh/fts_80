@@ -1,0 +1,19 @@
+<h1><%= t "subject.index.title" %></h1>
+<table>
+  <thead>
+    <tr>
+      <th><%= t "subject.index.name" %></th>
+      <th><%= t "subject.index.content" %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @subjects.each do |subject| %>
+      <tr>
+        <td><%= link_to subject.name, subject %></td>
+        <td><%= subject.content %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
