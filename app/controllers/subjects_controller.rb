@@ -6,7 +6,9 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
   end
 
-  def show; end
+  def show
+    @chapters = subject.chapters
+  end
 
   private
 

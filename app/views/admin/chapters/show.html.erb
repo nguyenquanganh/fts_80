@@ -1,0 +1,20 @@
+<p>
+  <strong><%= t "chapter.index.name" %></strong>
+  <%= @chapter.name %>
+</p>
+
+<p>
+  <strong><%= t "chapter.index.content" %></strong>
+  <%= @chapter.content %>
+</p>
+
+<p>
+  <strong><%= t "chapter.index.subject_id" %></strong>
+  <%= @chapter.subject_id %>
+</p>
+
+<p>
+  <strong><%= t "chapter.index.question_number" %></strong>
+  <%= @chapter.question_number %>
+</p>
+<%= link_to t("subject.edit.back"), [:admin, @subject] %>

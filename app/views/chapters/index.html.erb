@@ -1,0 +1,18 @@
+<h1><%= t "chapter.index.title" %></h1>
+<table>
+  <thead>
+    <tr>
+      <th><%= t "chapter.index.name" %></th>
+      <th><%= t "chapter.index.content" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @chapters.each do |chapter| %>
+      <tr>
+        <td><%= chapter.name %></td>
+        <td><%= chapter.content %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
