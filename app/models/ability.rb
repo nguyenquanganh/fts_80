@@ -6,7 +6,7 @@ class Ability
     if user.is_admin?
       can :manage, :all
     else
-      can %i(index show), [Subject, Chapter]
+      can %i(index show), [Subject, Chapter, Test, Question]
     end
   end
 end

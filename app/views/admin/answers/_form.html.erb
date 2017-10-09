@@ -1,0 +1,19 @@
+<%= form_with model: [:admin, subject, chapter, question, answer],
+  local: true do |form| %>
+  <%= render "shared/error", object: answer %>
+
+  <div class="field">
+    <%= form.label :answer_content, t("answer.content") %>
+    <%= form.text_field :answer_content, id: :answer_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_correct, t("answer.answer_type") %>
+    <%= form.select :is_correct, [[t("answer.a_true"), true],
+      [t("answer.a_false"), false]] %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

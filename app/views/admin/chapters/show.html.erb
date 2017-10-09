@@ -17,4 +17,14 @@
   <strong><%= t "chapter.index.question_number" %></strong>
   <%= @chapter.question_number %>
 </p>
-<%= link_to t("subject.edit.back"), [:admin, @subject] %>
+
+<div>
+  <% @questions.each do |question| %>
+    <li><%= link_to question.content,
+      admin_subject_chapter_question_path(@subject, @chapter, question) %></li>
+  <% end %>
+</div>
+
+<%= link_to t("subject.edit.back"), [:admin, @subject] %> |
+<%= link_to t("question.question_manage"),
+  admin_subject_chapter_questions_path(@subject, @chapter) %>

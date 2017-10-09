@@ -138,4 +138,26 @@ vi:
     didnt_unlock: "khong nhan duoc huong dan kich hoat?"
     unlock: "kich hoat"
   registrations:
-    registrations: "registrations"    
+    registrations: "registrations"
+  test:
+    create_succ: "Tao test thanh cong"
+    create_fail: "Tao test that bai"
+    del_succ: "Test da bi xoa"
+    def_fail: "Test xoa that bai"
+    not_found: "Khong tim thay test"
+    update_succ: "Cap nhat test thanh cong"
+    update_fail: "Cap nhat test that bai"
+  question:
+    create_succ: "Tao cau hoi thanh cong"
+    create_fail: "Tao cau hoi that bai"
+    update_succ: "Cap nhat cau hoi thanh cong"
+    update_fail: "Cap nhat cau hoi that bai"
+    del_succ: "Da xoa cau hoi"
+    del_fail: "Xoa cau hoi that bai"
+    single_choice: "1 dap an dung"
+    multiple_choice: "nhieu dap an dung"
+  chapter:
+    not_found: "Khong tim thay chapter"
+  answer:
+    a_true: "Dap an dung"
+    a_false: "Dap an sai"

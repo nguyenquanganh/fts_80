@@ -1,0 +1,22 @@
+<p>
+  <strong><%= t "question.content" %></strong>
+  <%= @question.content %>
+</p>
+
+<p>
+  <strong><%= t "question.question_type" %></strong>
+  <%= @question.question_type %>
+</p>
+
+<p>
+  <strong><%= t "chapter.chapter_id" %></strong>
+  <%= @question.chapter_id %>
+</p>
+
+<% @answers.each do |answer| %>
+  <li><%= answer.answer_content %></li>
+ <% end %>
+
+<%= link_to t("subject.edit.back"), [:admin, @subject, @chapter] %> |
+<%= link_to t("answer.answer_manage"),
+  admin_subject_chapter_question_answers_path(@subject, @chapter,@question) %>

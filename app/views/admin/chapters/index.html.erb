@@ -14,19 +14,19 @@
       <tr>
         <td><%= chapter.name %></td>
         <td><%= chapter.content %></td>
-          <td><%= chapter.subject_id %></td>
-          <td><%= chapter.question_number %></td>
-          <% if can? :edit, @chapter %>
-            <td><%= link_to t("chapter.index.edit"),
-              edit_admin_subject_chapter_path(@subject, chapter) %>
-            </td>
-          <% end %>
-          <% if can? :destroy, @chapter %>
-            <td><%= link_to t("chapter.index.destroy"),
-              admin_subject_chapter_path(@subject, chapter),
-              method: :delete, data: {confirm: t("subject.index.confirm")} %>
-            </td>
-          <% end %>
+        <td><%= chapter.subject_id %></td>
+        <td><%= chapter.question_number %></td>
+        <% if can? :edit, @chapter %>
+          <td><%= link_to t("chapter.index.edit"),
+            edit_admin_subject_chapter_path(@subject, chapter) %>
+          </td>
+        <% end %>
+        <% if can? :destroy, @chapter %>
+          <td><%= link_to t("chapter.index.destroy"),
+            admin_subject_chapter_path(@subject, chapter),
+            method: :delete, data: {confirm: t("subject.index.confirm")} %>
+          </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
