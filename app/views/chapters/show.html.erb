@@ -1,0 +1,12 @@
+<p>
+  <strong><%= t "chapter.index.name" %></strong>
+  <%= @chapter.name %>
+</p>
+<p>
+  <strong><%= t "chapter.index.content" %></strong>
+  <%= @chapter.content %>
+</p>
+<% if user_signed_in? %>
+  <%= link_to t("chapter.edit.test"), "#" %> |
+<% end %>
+<%= link_to t("chapter.edit.back"), subjects_path %>

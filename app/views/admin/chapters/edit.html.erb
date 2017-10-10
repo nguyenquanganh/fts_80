@@ -1,0 +1,5 @@
+<h1><%= t "chapter.edit.title" %></h1>
+
+<%= render "form", chapter: @chapter, subject: @subject %>
+
+<%= link_to t("chapter.edit.back"), admin_subject_chapters_path(@subject) %>

@@ -7,5 +7,16 @@
   <strong><%= t "subject.index.content" %></strong>
   <%= @subject.content %>
 </p>
-
-<%= link_to t("subject.edit.back"), admin_subjects_path %>
+<div>
+  <%= link_to t("subject.edit.back"), admin_subjects_path %>
+  <%= link_to t("subject.edit.new"),
+    new_admin_subject_chapter_path(@subject) %>
+  <% @chapters.each do |chapter| %>
+    <li><%= link_to chapter.name,
+      admin_subject_chapter_path(@subject, chapter) %></li>
+  <% end %>
+</div>
+<div>
+  <%= link_to t("subject.edit.manage_chapter"),
+    admin_subject_chapters_path(@subject) %>
+</div>

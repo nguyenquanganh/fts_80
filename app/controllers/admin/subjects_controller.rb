@@ -7,7 +7,9 @@ module Admin
       @subjects = Subject.all
     end
 
-    def show; end
+    def show
+      @chapters = subject.chapters
+    end
 
     def new
       @subject = Subject.new

@@ -28,7 +28,10 @@ RemoveUnusedMethodsInControllersCheck: {
     "PagesController#show",
     "UsersController#create",
     "SubjectsController#index",
-    "SubjectsController#create"
+    "SubjectsController#create",
+    "SubjectsController#subject_params",
+    "Admin::ChaptersController#create",
+    "ChaptersController#chapter_params"
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
