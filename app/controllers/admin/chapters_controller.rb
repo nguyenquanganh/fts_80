@@ -9,7 +9,9 @@ module Admin
       @chapters = subject.chapters
     end
 
-    def show; end
+    def show
+      @questions = chapter.questions
+    end
 
     def new
       @chapter = subject.chapters.new

@@ -31,12 +31,17 @@ RemoveUnusedMethodsInControllersCheck: {
     "SubjectsController#create",
     "SubjectsController#subject_params",
     "Admin::ChaptersController#create",
-    "ChaptersController#chapter_params"
+    "Admin::QuestionsController#create",
+    "ChaptersController#chapter_params",
+    "TestController#create",
+    "Admin::AnswersController#create"
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: {
-  except_methods: []
+  except_methods: [
+    "TestQuestion#check"
+  ]
 }
 ReplaceComplexCreationWithFactoryMethodCheck: { attribute_assignment_count: 2 }
 ReplaceInstanceVariableWithLocalVariableCheck: { }

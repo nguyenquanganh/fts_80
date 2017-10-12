@@ -139,3 +139,26 @@ en:
     unlock: "unlock"
   registrations:
     registrations: "registrations"
+  test:
+    create_succ: "Create test success"
+    create_fail: "Create test failed"
+    del_succ: "Test deleted"
+    def_fail: "Test delete failed"
+    not_found: "Test not found"
+    update_succ: "Test updated"
+    update_fail: "Test update failed"
+  question:
+    create_succ: "Create question success"
+    create_fail: "Create question failed"
+    update_succ: "Question updated"
+    update_fail: "Question update failed"
+    del_succ: "Question deleted"
+    del_fail: "Question delete failed"
+    single_choice: "Single Choice"
+    multiple_choice: "Multiple Choice"
+    question_type: "Question's Type"
+  chapter:
+    not_found: "Chapter not found"
+  answer:
+    a_true: "True"
+    a_false: "False"

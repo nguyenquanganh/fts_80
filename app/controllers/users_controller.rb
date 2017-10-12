@@ -1,5 +1,6 @@
 class UsersController < Devise::RegistrationsController
   attr_reader :user, :users
+
   before_action :authenticate_user!, only: %i(index edit update destroy)
   before_action :find_user, only: %i(show edit update destroy)
 

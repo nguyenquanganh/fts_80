@@ -1,0 +1,16 @@
+<p>
+  <strong><%= t "question.content" %></strong>
+  <%= @question.content %>
+</p>
+
+<% @answers.each do |answer| %>
+  <li><%= link_to answer.answer_content,
+    admin_subject_chapter_question_answer_path(@subject, @chapter,
+    @question, answer) %></li>
+ <% end %>
+
+<%= link_to t("subject.edit.back"), [:admin, @subject, @chapter,
+  @question] %> |
+<%= link_to t("subject.edit.new"),
+  new_admin_subject_chapter_question_path(@subject, @chapter, @question,
+  @answer) %>
