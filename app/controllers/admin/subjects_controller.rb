@@ -1,10 +1,11 @@
 module Admin
   class SubjectsController < ApplicationController
-    attr_reader :subject, :subjects
+    attr_reader :subject, :subjects, :search
     load_and_authorize_resource
 
     def index
-      @subjects = Subject.all
+      @search = Subject.ransack params[:q]
+      @subjects = search.result
     end
 
     def show
