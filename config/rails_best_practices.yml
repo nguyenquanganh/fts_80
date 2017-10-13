@@ -34,7 +34,30 @@ RemoveUnusedMethodsInControllersCheck: {
     "Admin::QuestionsController#create",
     "ChaptersController#chapter_params",
     "TestController#create",
-    "Admin::AnswersController#create"
+    "Admin::AnswersController#create",
+    "ChaptersController#chapter_params",
+    "ChaptersController#index",
+    "ChaptersController#show",
+    "Admin::ChaptersController#index",
+    "Admin::ChaptersController#show",
+    "Admin::ChaptersController#edit",
+    "Admin::ChaptersController#update",
+    "Admin::SubjectsController#show",
+    "Admin::SubjectsController#edit",
+    "Admin::SubjectsController#update",
+    "SubjectsController#show",
+    "UsersController#index",
+    "UsersController#show",
+    "UsersController#edit",
+    "UsersController#update",
+    "Admin::AnswersController#index",
+    "Admin::AnswersController#show",
+    "Admin::AnswersController#edit",
+    "Admin::AnswersController#update",
+    "Admin::QuestionsController#index",
+    "Admin::QuestionsController#show",
+    "Admin::QuestionsController#edit",
+    "Admin::QuestionsController#update"
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }

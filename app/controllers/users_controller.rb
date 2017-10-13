@@ -1,8 +1,7 @@
 class UsersController < Devise::RegistrationsController
   attr_reader :user, :users
 
-  before_action :authenticate_user!, only: %i(index edit update destroy)
-  before_action :find_user, only: %i(show edit update destroy)
+  load_and_authorize_resource except: %i(new create)
 
   def index
     @users = User.paginate page: params[:page]
@@ -38,7 +37,7 @@ class UsersController < Devise::RegistrationsController
   def destroy
     user.destroy
     flash[:success] = t "controller.deleted"
-    redirect_to users_url
+    redirect_to users_path
   end
 
   private
@@ -46,13 +45,5 @@ class UsersController < Devise::RegistrationsController
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
-  end
-
-  def find_user
-    @user = User.find_by id: params[:id]
-
-    return if user
-    flash[:danger] = t "controller.invalid"
-    redirect_to users_url
   end
 end
