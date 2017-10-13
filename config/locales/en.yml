@@ -162,3 +162,5 @@ en:
   answer:
     a_true: "True"
     a_false: "False"
+  subjects:
+    search: "Search"

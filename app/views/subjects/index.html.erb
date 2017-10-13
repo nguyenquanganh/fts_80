@@ -1,4 +1,11 @@
 <h1><%= t "subject.index.title" %></h1>
+<%= search_form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :name_cont, t("users.new.name") %>
+    <%= f.text_field :name_cont %>
+  </div>
+  <div class="actions"><%= f.submit t("subjects.search") %></div>
+<% end %>
 <table>
   <thead>
     <tr>

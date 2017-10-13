@@ -17,6 +17,7 @@ gem "rails-controller-testing"
 gem "omniauth-facebook"
 gem "cancancan", "~> 2.0"
 gem "devise"
+gem "ransack"
 
 group :development do
   gem "listen", "3.0.8"
