@@ -5,4 +5,5 @@ class Question < ApplicationRecord
 
   has_many :answers, dependent: :destroy
   has_many :results, dependent: :destroy
+  has_many :tests, through: :results, dependent: :destroy
 end

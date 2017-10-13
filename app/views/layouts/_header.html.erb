@@ -10,6 +10,8 @@
             <li><%= link_to t("layouts.header.subject"),
               admin_subjects_path %></li>
             <li><%= link_to t("layouts.header.user"), users_path %></li>
+            <li>
+              <%= link_to t("layouts.header.history"), admin_tests_path %></li>
           <% else %>
             <li><%= link_to t("layouts.header.subject"), subjects_path %></li>
           <% end %>

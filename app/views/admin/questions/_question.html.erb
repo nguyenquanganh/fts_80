@@ -1,0 +1,12 @@
+<h4><%= question.content %></h4>
+<ol>
+  <% chosen_answer_ids = test.answer_ids_of_question question.id %>
+  <% question.answers.each do |answer| %>
+    <% if chosen_answer_ids.include? answer.id %>
+      <b><li><%= answer.answer_content %></li></b>
+    <% else %>
+      <li><%= answer.answer_content %></li>
+    <% end %>
+  <% end %>
+</ol>
+<br/>
