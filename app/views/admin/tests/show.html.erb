@@ -1,0 +1,28 @@
+<p>
+  <strong><%= t "tests.index.user_id" %></strong>
+  <%= @test.user_id %>
+</p>
+
+<p>
+  <strong><%= t "tests.index.chapter_id" %></strong>
+  <%= @test.chapter_id %>
+</p>
+
+<p>
+  <strong><%= t "tests.index.date" %></strong>
+  <%= @test.date %>
+</p>
+
+<p>
+  <strong><%= t "tests.index.score" %></strong>
+  <%= @test.score %>
+</p>
+
+<p>
+  <strong><%= t "tests.index.question_number" %></strong>
+  <%= @test.chapter.question_number %>
+</p>
+
+<div>
+  <%= render @test.questions, test: @test%>
+</div>

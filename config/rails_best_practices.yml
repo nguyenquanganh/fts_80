@@ -57,7 +57,13 @@ RemoveUnusedMethodsInControllersCheck: {
     "Admin::QuestionsController#index",
     "Admin::QuestionsController#show",
     "Admin::QuestionsController#edit",
-    "Admin::QuestionsController#update"
+    "Admin::QuestionsController#update",
+    "Admin::TestsController#index",
+    "Admin::TestsController#show",
+    "Admin::TestsController#test_params",
+    "Admin::ResultsController#index",
+    "Admin::ResultsController#show",
+    "Admin::ResultsController#result_params"
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
