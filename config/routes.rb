@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
     devise_scope :user do
       resources :users do
-        resources :tests
+        resources :tests, only: %i(index show create update)
       end
     end
 

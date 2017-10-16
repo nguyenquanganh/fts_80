@@ -4,8 +4,15 @@
 <p>
   <strong><%= @chapter.content %></strong>
 </p>
-<% if user_signed_in? %>
-  <%= link_to t("chapters.test"), "#", class: "btn btn-success" %>
-<% end %>
-<%= link_to t("back"), subject_path(@subject),
-  class: "btn btn-default" %>
+
+<p>
+  <strong><%= t "chapter.index.subject_id" %></strong>
+  <%= @chapter.subject_id %>
+</p>
+
+<p>
+  <strong><%= t "chapter.index.question_number" %></strong>
+  <%= @chapter.question_number %>
+</p>
+
+<%= render "do_test" %>

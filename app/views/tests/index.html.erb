@@ -1,10 +1,11 @@
 <table>
   <thead>
     <tr>
-      <th><%= t "admin.subjects.name" %></th>
-      <th><%= t "admin.chapters.name" %></th>
-      <th><%= t "admin.tests.date" %></th>
-      <th><%= t "admin.tests.score" %></th>
+      <th><%= t "tests.index.subject" %></th>
+      <th><%= t "tests.index.chapter_id" %></th>
+      <th><%= t "tests.index.date" %></th>
+      <th><%= t "tests.index.score" %></th>
+      <th><%= t "tests.status" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +18,14 @@
         <td><%= test.correct_answer_of_user %> /
           <%= test.correct_answer_of_test %>
         </td>
-        <td><%= link_to t("view"), [@user, test],
-          class: "btn btn-info" %></td>
+        <td><%= test.status %></td>
+        <% if test.status == t("test.waitting") %>
+          <td><%= link_to t("test.do_test"), [@user, test] %></td>
+        <% else %>
+          <td><%= link_to t("view"), [@user, test] %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-

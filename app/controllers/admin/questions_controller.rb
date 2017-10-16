@@ -49,7 +49,8 @@ module Admin
     private
 
     def question_params
-      params.require(:question).permit(:content, :question_type, :chapter_id)
+      params.require(:question).permit :content, :question_type, :chapter_id,
+        answers_attributes: %i(id content is_correct question_id)
     end
   end
 end

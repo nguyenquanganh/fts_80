@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
   attr_reader :subject, :subjects, :search
+
   load_and_authorize_resource
 
   def index

@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20171004073320) do
     t.date "date"
     t.float "score"
     t.integer "user_id"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

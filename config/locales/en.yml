@@ -72,3 +72,8 @@ en:
     confirm: "Confirm password"
     login: "Login"
   size: "should be less than 5MB"
+  test:
+    do_test: "Do Test"
+    waitting: "waitting"
+    submit: "Submit success"
+    create: "Create Test"

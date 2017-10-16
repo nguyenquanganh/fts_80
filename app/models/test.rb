@@ -1,4 +1,6 @@
 class Test < ApplicationRecord
+  enum status: %i(waitting done)
+
   belongs_to :user
   belongs_to :chapter
 
@@ -7,6 +9,8 @@ class Test < ApplicationRecord
   has_many :answers, ->{distinct}, through: :results, dependent: :destroy
   has_many :question_answers, ->{distinct}, through: :questions,
     dependent: :destroy, source: :answers, class_name: Answer.name
+
+  accepts_nested_attributes_for :results
 
   def answer_ids_of_question question_id
     results.where(question_id: question_id).pluck :answer_id

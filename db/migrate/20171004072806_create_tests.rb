@@ -5,6 +5,7 @@ class CreateTests < ActiveRecord::Migration[5.1]
       t.date :date
       t.float :score
       t.integer :user_id
+      t.integer :status
 
       t.timestamps
     end

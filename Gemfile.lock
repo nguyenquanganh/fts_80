@@ -42,7 +42,7 @@ GEM
     ansi (1.5.0)
     arel (8.0.0)
     ast (2.3.0)
-    autoprefixer-rails (7.1.5)
+    autoprefixer-rails (7.1.6)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)

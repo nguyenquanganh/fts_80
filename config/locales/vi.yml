@@ -72,3 +72,9 @@ vi:
     confirm: "Nhập lại mật khẩu"
     login: "Đăng nhập"
   size: "should be less than 5MB"
+  test:
+    do_test: "Lam Test"
+    waitting: "chua lam"
+    submit: "Nop bai thanh cong"
+    create: "Tao bai Test"
+
