@@ -18,6 +18,11 @@ gem "omniauth-facebook"
 gem "cancancan", "~> 2.0"
 gem "devise"
 gem "ransack"
+gem "font-awesome-rails"
+gem "carrierwave", "1.1.0"
+gem "mini_magick", "4.7.0"
+gem "fog", "1.40.0"
+gem "config"
 
 group :development do
   gem "listen", "3.0.8"
@@ -40,7 +45,7 @@ group :development, :test do
   gem "brakeman", require: false
   gem "jshint"
   gem "bundler-audit"
-  gem "rubocop", require: false
+  gem "rubocop", "0.50.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "scss_lint", require: false
   gem "scss_lint_reporter_checkstyle", require: false

@@ -1,0 +1,8 @@
+<ul>
+  <li style="font-size: 24px;"><%= link_to chapter.name,
+    subject_chapter_path(subject, chapter), class: "chapter" %></li>
+  <ul>
+    <li><%= chapter.content %></li>
+  </ul>
+</ul>
+<br/>

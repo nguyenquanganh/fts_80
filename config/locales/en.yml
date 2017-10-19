@@ -1,166 +1,66 @@
 en:
-  title_t: "Ruby on Rails Tutorial Sample App"
-  static_pages:
-    home:
-      title: "Home"
-      content: "This is the home page for the"
-      content1: "Ruby on Rails Tutorial"
-      content2: "sample application."
-      signup: "Signup now"
-      alt: "Rails logo"
-    help:
-      title: "Help"
-      content: "Get help on the Ruby on Rails Tutorial at the"
-      content1: "Rails Tutorial help section"
-      content2: "To get help on this sample app, see the"
-      content3: "Ruby on Rails Tutorial"
-    about:
-      title: "About"
-      content: "Ruby on Rails Tutorial"
-      content1: "to teach web development with"
-      content2: "This is the sample application for the tutorial."
-      n1: "is a"
-      n2: "book"
-      n3: "and"
-      n4: "screencast series"
-      n5: "Ruby on Rails"
-      the: "The"
-    contact:
-      title: "Contact"
-      content: "Contact the Ruby on Rails Tutorial about the sample app at the"
-      content1: "contact page"
+  title_t: "Framgia Testing System"
+  error: "Error!!!"
+  saved: "Saved!"
+  submit: "Submit"
+  edit: "Edit"
+  back: "Back"
+  destroy: "Delete"
+  new: "New"
+  confirm: "Are you sure?"
+  view: "View"
+  admin:
+    answers:
+      content: "Answer content"
+      answer_type: "Is correct?"
+      a_true: "True"
+      a_false: "False"
+      manage: "Manage Answer"
+    chapters:
+      name: "Chapter name"
+      content: "Chapter content"
+      question_number: "Question number: "
+      manage: "Manage Chapter"
+    questions:
+      content: "Question content"
+      question_type: "Question type"
+      manage: "Manage Question"
+    subjects:
+      name: "Subject name"
+      content: "Subject content"
+    tests:
+      user_name: "User name"
+      date: "Time"
+      score: "Mark"
+  chapters:
+    test: "Make a test"
   layouts:
-    footer:
-      leftcontent: "The"
-      leftcontent1: "Ruby on Rails Tutorial"
-      leftcontent2: "by"
-      leftcontent3: "Michael Hartl"
-      rightcontent4: "News"
-      about: "About"
-      contact: "Contact"
-    header:
-      title: "sample app"
-      homr: "Home"
-      help: "Help"
-      login: "Login"
-      user: "Users"
-      profile: "Profile"
-      setting: "Settings"
-      logout: "Log out"
-      account: "Account "
+    search: "Search for Subject"
+    home: "Home"
+    subject: "Subject"
+    user: "Users"
+    history: "Test History"
+    account: "Account"
+    profile: "Profile"
+    setting: "Setting"
+    logout: "Logout"
+    login: "Login"
+    language: "Language"
+    en: "English"
+    vi: "Vietnamese"
+    copyright: "Copyright © 2017"
+  pages:
+    text1: "we are YOUNG"
+    text2: "we have many time"
+    text3: "we make it awesome"
+    ruby: "Ruby On Rails"
+    learn: "Learn it now"
+    html5: "HTML5"
+    git: "GIT"
   users:
-    new:
-      password_: "password"
-      users: "users"
-      title: "Sign up"
-      content: "Create an account"
-      name: "Name"
-      email: "Email"
-      pass: "Password"
-      confirm: "Confirmation"
-      create: "Create my account"
-    index:
-      title: "All users"
-    edit:
-      title: "Edit user"
-      save: "Save changes"
-      update: "Update your profile"
-      submit: "Change"
-    user:
-      delete: "Delete"
-      sure: "You sure?"
-  application:
-    language:
-      en: "English"
-      vi: "Vietnamese"
-  error:
-    form-contains: "The form contains"
-    error: "error"
-  controller:
-    welcome: "Sing-up successfully. Now you can log in!"
-    updated: "Profile updated"
-    deleted: "User deleted"
-    login_plz: "Please log in."
-    invalid: "User invalid"
-    sessions:
-      danger: "Invalid email/password combination"
-      not_activated: "Account not activated. "
-      check: "Check your email for the activation link."
-    activate:
-      activated: "Account activated!"
-      no_activated: "Invalid activation link"
-  sessions:
-    new:
-      sess: "sessions"
-      title: "Log in"
-      email: "Email"
-      pass: "Password"
-      signup: "Sign up now!"
-      newusr: "New user?"
-      remember: "Remember me on this computer"
-      char_min: "%{min_length} character minimum"
-  mailer:
-    activation:
-      title: "Sample App"
-      hi: "Hi"
-      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
-      active: "Activate"
-  password_resets:
-    new:
-      title: "Forgot Password"
-      submit: "Send me"
-    edit:
-      new: "Forgot password"
-      title: "Reset Password"
-      password: "Password"
-      confirm: "Confirm Password"
-      submit: "Reset"
-    send:
-      success: "Check your email for instructions"
-      fail: "Email not found"
-    subject: "Reset password"
-    reset:
-      title: "Reset Password"
-      click: "Click link below to reset your password:"
-      submit: "Reset now"
-      expire: "This link will expire in two hours."
-      ignore: "If you did not request your password to be reset,
-        please ignore this email and your password will stay as it is."
-    update:
-      success: "Password has been reset."
-      expire: "Password reset has expired"
-      blank: "can't be blank"
-    find:
-      fail: "User not found"
-  confirmations:
-    confirm: "confirmation"
-    didnt_confirm: "Didn't receive confirmation instructions?"
-    didnt_unlock: "Didn't receive unlock instructions?"
-    unlock: "unlock"
-  registrations:
-    registrations: "registrations"
-  test:
-    create_succ: "Create test success"
-    create_fail: "Create test failed"
-    del_succ: "Test deleted"
-    def_fail: "Test delete failed"
-    not_found: "Test not found"
-    update_succ: "Test updated"
-    update_fail: "Test update failed"
-  question:
-    create_succ: "Create question success"
-    create_fail: "Create question failed"
-    update_succ: "Question updated"
-    update_fail: "Question update failed"
-    del_succ: "Question deleted"
-    del_fail: "Question delete failed"
-    single_choice: "Single Choice"
-    multiple_choice: "Multiple Choice"
-    question_type: "Question's Type"
-  chapter:
-    not_found: "Chapter not found"
-  answer:
-    a_true: "True"
-    a_false: "False"
-  subjects:
-    search: "Search"
+    email: "Email"
+    password: "Password"
+    signup: "Signup"
+    name: "User name"
+    confirm: "Confirm password"
+  size: "should be less than 5MB"

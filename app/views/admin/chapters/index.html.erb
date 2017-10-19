@@ -1,39 +1,26 @@
-<h1><%= t "chapter.index.title" %></h1>
-<table>
-  <thead>
-    <tr>
-      <th><%= t "chapter.index.name" %></th>
-      <th><%= t "chapter.index.content" %></th>
-      <th><%= t "chapter.index.subject_id" %></th>
-      <th><%= t "chapter.index.question_number" %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @chapters.each do |chapter| %>
-      <tr>
-        <td><%= chapter.name %></td>
-        <td><%= chapter.content %></td>
-        <td><%= chapter.subject_id %></td>
-        <td><%= chapter.question_number %></td>
-        <% if can? :edit, @chapter %>
-          <td><%= link_to t("chapter.index.edit"),
-            edit_admin_subject_chapter_path(@subject, chapter) %>
-          </td>
-        <% end %>
-        <% if can? :destroy, @chapter %>
-          <td><%= link_to t("chapter.index.destroy"),
-            admin_subject_chapter_path(@subject, chapter),
-            method: :delete, data: {confirm: t("subject.index.confirm")} %>
-          </td>
-        <% end %>
-      </tr>
+<% @chapters.each do |chapter| %>
+  <ul>
+    <li style="font-size: 24px; color: black"><%= chapter.name %></li>
+    <li><%= chapter.content %></li>
+    <li><%= t "admin.chapters.question_number" %>
+      <%= chapter.question_number %></li>
+    <% if can? :edit, @chapter %>
+      <%= link_to t("edit"),
+        edit_admin_subject_chapter_path(@subject, chapter),
+        class: "btn btn-info" %>
     <% end %>
-  </tbody>
-</table>
-<br>
-<% if can? :new, Chapter %>
-  <%= link_to t("subject.index.new"),
-    new_admin_subject_chapter_path(@subject) %> |
+    <% if can? :destroy, @chapter %>
+      <%= link_to t("destroy"),
+        admin_subject_chapter_path(@subject, chapter),
+        method: :delete, data: {confirm: t("confirm")},
+        class: "btn btn-danger" %>
+    <% end %>
+  </ul>
 <% end %>
-<%= link_to t("subject.edit.back"), [:admin, @subject] %>
+<br>
+<%= link_to t("back"), [:admin, @subject],
+  class: "btn btn-default" %>
+<% if can? :new, Chapter %>
+  <%= link_to t("new"),
+    new_admin_subject_chapter_path(@subject), class: "btn btn-success" %>
+<% end %>

@@ -10,8 +10,10 @@ User.create!(name: "User3", is_admin: false, email: "user3@gmail.com",
   password: "user12345")
 User.create!(name: "User4", is_admin: false, email: "user4@gmail.com",
   password: "user12345")
-Subject.create!(name: "Ruby on Rails", content: "Ruby on Rails content")
-Subject.create!(name: "Git", content: "Git content")
+Subject.create!(name: "Ruby on Rails", content: "Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License.")
+Subject.create!(name: "GIT", content: "Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.")
+Subject.create!(name: "HTML5", content: "HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current major version of the HTML standard.")
+Subject.create!(name: "CSS3", content: "CSS3 is an abbreviation for Cascading Style Sheets, level 3, a declarative stylesheet language for structured documents.")
 Chapter.create!(name: "Chapter 1: From zero to deploy",
   content: "Welcome to Ruby on Rails Tutorial: Learn Web Development with Rails.",
   subject_id: 1,

@@ -1,8 +1,8 @@
 <li>
   <p><%= link_to user.name, user %>
     <% if current_user.is_admin? %>
-      | <%= link_to t("users.user.delete"), user, method: :delete,
-      data: {confirm: t("users.user.sure")} %>
+      | <%= link_to t("destroy"), user, method: :delete,
+      data: {confirm: t("confirm")} %>
     <% end %>
   </p>
 </li>

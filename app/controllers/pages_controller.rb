@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def show
+    @subjects = Subject.all
     if valid_page?
       render "pages/#{params[:page]}"
     else
