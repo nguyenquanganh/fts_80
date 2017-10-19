@@ -1,9 +1,8 @@
-<h1><%= t "answer.title" %></h1>
 <table>
   <thead>
     <tr>
-      <th><%= t "answer.content" %></th>
-      <th><%= t "answer.is_correct" %></th>
+      <th><%= t "admin.answers.content" %></th>
+      <th><%= t "admin.answers.answer_type" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,16 +12,17 @@
         <td><%= answer.answer_content %></td>
         <td><%= answer.is_correct %></td>
         <% if can? :edit, @answer %>
-          <td><%= link_to t("chapter.index.edit"),
+          <td><%= link_to t("edit"),
             edit_admin_subject_chapter_question_answer_path(@subject, @chapter,
-            @question, answer) %>
+            @question, answer), class: "btn btn-info" %>
           </td>
         <% end %>
         <% if can? :destroy, @answer %>
-          <td><%= link_to t("chapter.index.destroy"),
+          <td><%= link_to t("destroy"),
             admin_subject_chapter_question_answer_path(@subject, @chapter,
             @question, answer), method: :delete,
-            data: {confirm: t("subject.index.confirm")} %>
+            data: {confirm: t("confirm")},
+            class: "btn btn-danger" %>
           </td>
         <% end %>
       </tr>
@@ -30,10 +30,11 @@
   </tbody>
 </table>
 <br>
+<%= link_to t("back"),
+  admin_subject_chapter_question_path(@subject, @chapter, @question),
+  class: "btn btn-default" %>
 <% if can? :new, Answer %>
-  <%= link_to t("subject.index.new"),
+  <%= link_to t("new"),
     new_admin_subject_chapter_question_answer_path(@subject, @chapter,
-    @question) %> |
+    @question), class: "btn btn-success " %>
 <% end %>
-<%= link_to t("subject.edit.back"),
-  admin_subject_chapter_question_path(@subject, @chapter, @question) %>

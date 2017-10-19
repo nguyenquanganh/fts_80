@@ -1,12 +1,91 @@
-<% provide :title, t("static_pages.home.title") %>
-<div class="center jumbotron">
-  <h1><%= t "static_pages.home.title" %></h1>
-  <h2>
-    <%= t "static_pages.home.content" %>
-    <%= link_to t("static_pages.home.content1"),
-      "http://www.railstutorial.org/" %></a>
-    <%= t "static_pages.home.content2" %>
-  </h2>
-  <%= link_to t("static_pages.home.signup"), new_user_registration_path,
-    class: "btn btn-lg btn-primary" %>
+<center>
+  <section class="cd-intro">
+    <h1 class="cd-headline type letters">
+      <span></span>
+      <span class="cd-words-wrapper">
+        <b class="is-visible"><%= t "pages.text1" %></b>
+        <b><%= t "pages.text2" %></b>
+        <b><%= t "pages.text3" %></b>
+      </span>
+    </h1>
+  </section>
+</center>
+<section class="slider" style="margin-top: -90px;"><!--slider-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="slider-carousel" class="carousel slide"
+          data-ride="carousel">
+          <ol class="carousel-indicators">
+            <% @subjects.each_with_index do |subject, index| %>
+              <% if index.zero? %>
+                <li data-target="#slider-carousel" data-slide-to="<%= index %>"
+                  class="active"></li>
+              <% else %>
+                <li data-target="#slider-carousel" data-slide-to="index"></li>
+              <% end %>
+            <% end %>
+          </ol>
+          <div class="carousel-inner">
+            <% @subjects.each_with_index do |subject, index| %>
+              <% if index.zero? %>
+                <div class="item active">
+              <% else %>
+                <div class="item">
+              <% end %>
+                <div class="col-sm-6">
+                  <h1><span><%= subject.name %></span></h1>
+                  <p><%= subject.content %></p>
+                  <%= link_to t("pages.learn"), subject,
+                    class: "flat-button1" %>
+                </div>
+                <div class="col-sm-6 banner">
+                  <%= image_tag subject.picture.url if subject.picture? %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <a href="#slider-carousel" class="left control-carousel hidden-xs"
+            data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+          </a>
+          <a href="#slider-carousel" class="right control-carousel hidden-xs"
+            data-slide="next">
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!--/slider-->
+<div class="left-sidebar"><h2><%= t "layouts.subject" %></h2></div>
+<div class="container">
+  <div class="row">
+    <div class="flat-projects projects-masonry projects-has-filter">
+      <div class="projects-items">
+        <% @subjects.each do |subject| %>
+          <div class="col-sm-3">
+            <div class="projects hentry handmade photos menu-1"">
+              <div class="project-wrap">
+                <div class="project-thumbnail menu-2">
+                  <%= image_tag subject.picture.url if subject.picture? %>
+                </div>
+                <div class="project-info">
+                  <div class="project-info-wrap">
+                    <h3 class="project-title">
+                      <%= link_to subject.name, subject %>
+                    </h3>
+                    <h6 class="project-buttons">
+                      <%= link_to t("pages.learn"), subject,
+                        class: "flat-button" %>
+                    </h6>
+                  </div>
+                </div>
+              </div><!-- /.project-wrap -->
+            </div><!-- /.hentry -->
+          </div>
+        <% end %>
+      </div><!-- /.projects-items -->
+    </div><!-- /.blog-shortcode -->
+  </div><!--  -->
 </div>

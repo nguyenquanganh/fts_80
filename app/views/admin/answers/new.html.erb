@@ -1,8 +1,11 @@
-<h1><%= t "answer.new" %></h1>
+<div class="left-sidebar">
+  <h2 style="font-size: 24px;"><%= t "new" %></h2>
+</div>
 
 <%= render "form", chapter: @chapter, subject: @subject, question: @question,
   answer: @answer %>
 
-<%= link_to t("subject.edit.back"),
+<%= link_to t("back"),
   admin_subject_chapter_question_answers_path(subject_id: @subject.id,
-  chapter_id: @chapter.id, question_id: @question.id) %>
+  chapter_id: @chapter.id, question_id: @question.id),
+  class: "btn btn-default" %>

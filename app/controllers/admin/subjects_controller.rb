@@ -45,7 +45,7 @@ module Admin
     private
 
     def subject_params
-      params.require(:subject).permit :name, :content
+      params.require(:subject).permit :name, :content, :picture
     end
   end
 end

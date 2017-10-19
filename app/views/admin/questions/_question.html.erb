@@ -1,5 +1,5 @@
-<h4><%= question.content %></h4>
-<ol>
+<h5><%= question.content %></h5>
+<ul>
   <% chosen_answer_ids = test.answer_ids_of_question question.id %>
   <% question.answers.each do |answer| %>
     <% if chosen_answer_ids.include? answer.id %>
@@ -8,5 +8,5 @@
       <li><%= answer.answer_content %></li>
     <% end %>
   <% end %>
-</ol>
+</ul>
 <br/>

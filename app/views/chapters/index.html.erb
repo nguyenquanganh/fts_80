@@ -1,18 +1,15 @@
-<h1><%= t "chapter.index.title" %></h1>
-<table>
-  <thead>
-    <tr>
-      <th><%= t "chapter.index.name" %></th>
-      <th><%= t "chapter.index.content" %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @chapters.each do |chapter| %>
-      <tr>
-        <td><%= chapter.name %></td>
-        <td><%= chapter.content %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
+<div class="left-sidebar">
+  <h2 style="font-size: 24px;"><%= @subject.name %></h2>
+</div>
+<ul>
+  <% @chapters.each do |chapter| %>
+    <li style="font-size: 24px;"><%= chapter.name %></li>
+    <ul>
+      <li><%= chapter.content %></li>
+    </ul>
+  <% end %>
+</ul>
+<br/>
+<%= link_to t("back"), subject_path(@subject),
+  class: "btn btn-info" %>
+<br/>

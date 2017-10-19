@@ -1,22 +1,22 @@
-<p>
-  <strong><%= t "subject.index.name" %></strong>
-  <%= @subject.name %>
-</p>
+<div class="left-sidebar">
+  <h2 style="font-size: 24px;"><%= @subject.name %></h2>
+</div>
 
 <p>
-  <strong><%= t "subject.index.content" %></strong>
-  <%= @subject.content %>
+  <strong><%= @subject.content %></strong>
 </p>
+
+<%= render @subject.chapters, subject: @subject %>
+
+<br/>
 <div>
-  <% @chapters.each do |chapter| %>
-    <li><%= link_to chapter.name,
-      admin_subject_chapter_path(@subject, chapter) %></li>
-  <% end %>
-</div>
-<div>
-  <%= link_to t("subject.edit.back"), admin_subjects_path %>
-  <%= link_to t("subject.edit.new"),
-    new_admin_subject_chapter_path(@subject) %>
-  <%= link_to t("subject.edit.manage_chapter"),
-    admin_subject_chapters_path(@subject) %>
+  <center>
+    <%= link_to t("back"), admin_subjects_path,
+      class: "btn btn-default back" %>
+    <%= link_to t("admin.chapters.manage"),
+      admin_subject_chapters_path(@subject), class: "btn btn-info manage" %>
+    <%= link_to t("new"),
+      new_admin_subject_chapter_path(@subject),
+      class: "btn btn-success subject1" %>
+  </center>
 </div>

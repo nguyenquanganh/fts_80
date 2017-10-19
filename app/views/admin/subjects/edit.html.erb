@@ -1,6 +1,8 @@
-<h1><%= t "subject.edit.title" %></h1>
+<div class="left-sidebar">
+  <h2 style="font-size: 24px;"><%= t "edit" %></h2>
+</div>
 
 <%= render "form", subject: @subject %>
-
-<%= link_to t("subject.edit.title"), admin_subject_path %> |
-<%= link_to t("subject.edit.title"), admin_subjects_path %>
+<br/>
+<%= link_to t("back"), admin_subjects_path,
+  class: "btn btn-info" %>

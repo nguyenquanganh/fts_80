@@ -1,28 +1,23 @@
 <p>
-  <strong><%= t "tests.index.user_id" %></strong>
+  <strong><%= t "admin.tests.user_name" %></strong>
   <%= @test.user_id %>
 </p>
-
 <p>
-  <strong><%= t "tests.index.chapter_id" %></strong>
-  <%= @test.chapter_id %>
-</p>
-
-<p>
-  <strong><%= t "tests.index.date" %></strong>
+  <strong><%= t "admin.tests.date" %></strong>
   <%= @test.date %>
 </p>
 
 <p>
-  <strong><%= t "tests.index.score" %></strong>
+  <strong><%= t "admin.tests.score" %></strong>
   <%= @test.score %>
 </p>
 
 <p>
-  <strong><%= t "tests.index.question_number" %></strong>
+  <strong><%= t "admin.chapters.question_number" %></strong>
   <%= @test.chapter.question_number %>
 </p>
 
 <div>
   <%= render @test.questions, test: @test%>
 </div>
+<%= link_to t("back"), admin_tests_path, class: "btn btn-info" %>

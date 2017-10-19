@@ -1,17 +1,9 @@
+<div class="left-sidebar">
+  <h2 style="font-size: 24px;"><%= @subject.name %></h2>
+</div>
 <p>
-  <strong><%= t "subject.index.name" %></strong>
-  <%= @subject.name %>
+  <strong><%= @subject.content %></strong>
 </p>
-
-<p>
-  <strong><%= t "subject.index.content" %></strong>
-  <%= @subject.content %>
-</p>
-
-<%= link_to t("subject.edit.back"), subjects_path %>
-
-<% @chapters.each do |chapter| %>
-  <li>
-    <%= link_to chapter.name, subject_chapter_path(@subject, chapter) %>
-  </li>
-<% end %>
+<%= render @subject.chapters, subject: @subject %>
+<br/>
+<%= link_to t("back"), subjects_path, class: "btn btn-info" %>

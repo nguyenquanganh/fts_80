@@ -1,12 +1,11 @@
+<div class="left-sidebar">
+  <h2 style="font-size: 24px;"><%= @chapter.name %></h2>
+</div>
 <p>
-  <strong><%= t "chapter.index.name" %></strong>
-  <%= @chapter.name %>
-</p>
-<p>
-  <strong><%= t "chapter.index.content" %></strong>
-  <%= @chapter.content %>
+  <strong><%= @chapter.content %></strong>
 </p>
 <% if user_signed_in? %>
-  <%= link_to t("chapter.edit.test"), "#" %> |
+  <%= link_to t("chapters.test"), "#", class: "btn btn-success" %>
 <% end %>
-<%= link_to t("chapter.edit.back"), subjects_path %>
+<%= link_to t("back"), subject_path(@subject),
+  class: "btn btn-default" %>

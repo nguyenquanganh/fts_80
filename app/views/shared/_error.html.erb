@@ -1,7 +1,7 @@
 <% if object.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize object.errors.count, t("chapter.form.error") %>
-      <%= t "chapter.form.saved" %></h2>
+    <h2><%= pluralize object.errors.count, t("error") %>
+      <%= t "saved" %></h2>
     <ul>
       <% object.errors.full_messages.each do |message| %>
         <li><%= message %></li>
