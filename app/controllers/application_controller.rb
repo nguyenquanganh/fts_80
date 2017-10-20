@@ -19,12 +19,12 @@ class ApplicationController < ActionController::Base
   end
 
   def not_found
-    flash[:danger] = t "controller.application.not_found"
+    flash[:danger] = t "not_found"
     redirect_to root_path
   end
 
   def not_authorized
-    flash[:danger] = t "controller.application.not_authorized"
+    flash[:danger] = t "not_authorized"
     redirect_to root_path
   end
 end

@@ -12,7 +12,7 @@ module Admin
 
     def destroy
       test.destroy
-      flash[:success] = t "tests.del_success"
+      flash[:success] = t "destroy_succ"
       redirect_to admin_tests_path
     end
 

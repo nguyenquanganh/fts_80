@@ -20,10 +20,10 @@ module Admin
 
     def create
       if question.save
-        flash[:success] = t "question.create_succ"
+        flash[:success] = t "create_succ"
         redirect_to admin_subject_chapter_questions_path(subject, chapter)
       else
-        flash[:danger] = t "question.create_fail"
+        flash[:danger] = t "create_fail"
         render :new
       end
     end
@@ -32,17 +32,17 @@ module Admin
 
     def update
       if question.update_attributes question_params
-        flash[:success] = t "question.update_succ"
+        flash[:success] = t "update_succ"
         redirect_to admin_chapter_questions_path chapter
       else
-        flash[:danger] = t "question.update_fail"
+        flash[:danger] = t "update_fail"
         render :edit
       end
     end
 
     def destroy
       question.destroy
-      flash.now[:success] = t "question.del_succ"
+      flash.now[:success] = t "destroy_succ"
       redirect_to admin_subject_chapter_questions_path(subject, chapter)
     end
 

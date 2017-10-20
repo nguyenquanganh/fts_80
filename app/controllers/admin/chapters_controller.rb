@@ -21,25 +21,27 @@ module Admin
 
     def create
       if chapter.save
-        flash[:success] = t "controller.chapter.create"
+        flash[:success] = t "create_succ"
         redirect_to admin_subject_chapters_path(subject)
       else
+        flash[:danger] = t "create_fail"
         render :new
       end
     end
 
     def update
       if chapter.update_attributes chapter_params
-        flash[:success] = t "controller.chapter.update"
+        flash[:success] = t "update_succ"
         redirect_to admin_subject_chapters_path(subject)
       else
+        flash[:danger] = t "update_fail"
         render :edit
       end
     end
 
     def destroy
       chapter.destroy
-      flash[:success] = t "controller.chapter.destroy"
+      flash[:success] = t "destroy_succ"
       redirect_to admin_subject_chapters_path(subject)
     end
 
