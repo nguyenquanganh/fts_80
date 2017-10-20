@@ -20,25 +20,27 @@ module Admin
 
     def create
       if subject.save
-        flash[:success] = t "controller.subject.create"
+        flash[:success] = t "create_succ"
         redirect_to admin_subjects_path
       else
+        flash[:danger] = t "create_fail"
         render :new
       end
     end
 
     def update
       if subject.update_attributes subject_params
-        flash[:success] = t "controller.subject.update"
+        flash[:success] = t "update_succ"
         redirect_to admin_subjects_path
       else
+        flash[:danger] = t "update_fail"
         render :edit
       end
     end
 
     def destroy
       subject.destroy
-      flash[:success] = t "controller.subject.destroy"
+      flash[:success] = t "destroy_succ"
       redirect_to admin_subjects_path
     end
 

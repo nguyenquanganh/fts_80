@@ -9,6 +9,13 @@ en:
   new: "New"
   confirm: "Are you sure?"
   view: "View"
+  create_succ: "Create success"
+  create_fail: "Create failed"
+  update_succ: "Update success"
+  update_fail: "Update failed"
+  destroy_succ: "Delete success"
+  not_found: "Not Found!!!"
+  not_authorized: "You are not authorized!!!"
   admin:
     answers:
       content: "Answer content"

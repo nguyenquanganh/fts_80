@@ -1,9 +1,12 @@
 <% provide :title, @user.name %>
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-12">
     <section class="user-info">
       <h4>
         <%= @user.name %>
+        <br/>
+        <br/>
+        <%= render "tests/index", user: @user %>
       </h4>
     </section>
   </aside>

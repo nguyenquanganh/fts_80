@@ -9,6 +9,13 @@ vi:
   new: "Tạo mới"
   confirm: "Chắc chắn?"
   view: "Xem"
+  create_succ: "Tạo thành công"
+  create_fail: "Tạo thất bại"
+  update_succ: "Cập nhật thành công"
+  update_fail: "Cập nhật thất bại"
+  destroy_succ: "Xoá thành công"
+  not_found: "Không tìm thấy!!!"
+  not_authorized: "Bạn không được ủy quyền!!!"
   admin:
     answers:
       content: "Nội dung câu trả lời"

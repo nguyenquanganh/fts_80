@@ -23,29 +23,29 @@ module Admin
 
     def create
       if answer.save
-        flash[:success] = t "answer.create_succ"
+        flash[:success] = t "create_succ"
         redirect_to admin_subject_chapter_question_answers_path(subject,
           chapter, question)
       else
-        flash[:danger] = t "question.create_fail"
+        flash[:danger] = t "create_fail"
         render :new
       end
     end
 
     def update
       if answer.update_attributes answer_params
-        flash[:success] = t "answer.update_succ"
+        flash[:success] = t "update_succ"
         redirect_to admin_subject_chapter_question_answers_path(subject,
           chapter, question)
       else
-        flash[:danger] = t "answer.update_fail"
+        flash[:danger] = t "update_fail"
         render :edit
       end
     end
 
     def destroy
       answer.destroy
-      flash[:success] = t "controller.chapter.destroy"
+      flash[:success] = t "destroy_succ"
       redirect_to admin_subject_chapter_question_answers_path(subject, chapter,
         question)
     end
