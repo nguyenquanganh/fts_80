@@ -1,6 +1,6 @@
 <p>
   <strong><%= t "admin.tests.user_name" %></strong>
-  <%= @test.user_id %>
+  <%= @test.user.name %>
 </p>
 <p>
   <strong><%= t "admin.tests.date" %></strong>
@@ -9,7 +9,8 @@
 
 <p>
   <strong><%= t "admin.tests.score" %></strong>
-  <%= @test.score %>
+  <%= @test.correct_answer_of_user %> /
+  <%= @test.correct_answer_of_test %>
 </p>
 
 <p>
@@ -18,6 +19,8 @@
 </p>
 
 <div>
-  <%= render @test.questions, test: @test%>
+  <ol type="1">
+    <%= render @test.questions, test: @test%>
+  </ol>
 </div>
 <%= link_to t("back"), admin_tests_path, class: "btn btn-info" %>

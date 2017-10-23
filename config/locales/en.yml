@@ -70,4 +70,5 @@ en:
     signup: "Signup"
     name: "User name"
     confirm: "Confirm password"
+    login: "Login"
   size: "should be less than 5MB"

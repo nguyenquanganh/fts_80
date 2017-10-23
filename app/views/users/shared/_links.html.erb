@@ -1,5 +1,9 @@
-<%- if devise_mapping.registerable? &&
-  controller_name != t("layouts.users") %>
+<%- if controller_name != "sessions" %>
+  <div style="margin-top: 20px; font-weight: bold;">
+    <%= link_to t("users.login"), new_session_path(resource_name) %><br />
+  </div>
+<% end -%>
+<%- if devise_mapping.registerable? && controller_name != "users" %>
   <div style="margin-top: 20px; font-weight: bold;">
     <%= link_to t("users.signup"),
       new_registration_path(resource_name) %><br />
